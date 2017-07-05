@@ -1,0 +1,61 @@
+
+
+<section>
+  <div class="home12-newsletter margin-top-50 margin-bottom-50">
+  <div class="container">
+
+       <div class="row">
+          <div class="col-md-6 col-sm-6 col-xs-12">
+            <div class="background-newsletter">
+        		<img src="{{'newletter_img.jpg'|asset_url}}" alt="">
+            </div> 
+            <div class="content-newsletter">
+              {%assign newletter_title= settings.newletter_title %}
+            {%assign newletter_des= settings.newletter_des %}
+            {%assign newletter_button= settings.newletter_button %}
+            {%assign newletter_input= settings.newletter_input %}
+            {% if settings.newsletter_form_action != blank %}
+            {% assign form_action = settings.newsletter_form_action %}
+            {% else %}
+            {% assign form_action = '#' %}
+            {% endif %}
+       		<h2 class="">{{newletter_title}}</h2>
+            <p class="">{{newletter_des}}</p>
+            
+            <form action="{{ form_action }}" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" target="_blank"  class="subscible-form">
+              <div class="form-group">
+                <label class="sr-only" for="subscribe-email">{{'subscible.email'|t}}</label>
+                <input  class="form-control" type="email" value="{% if customer %}{{ customer.email }}{% endif %}" placeholder="{{newletter_input}}" name="EMAIL" id="mail" autocorrect="off" autocapitalize="off">
+                
+              </div>
+              
+              <div class="form-submit">
+                <input type="submit" class="btn btn-lg btn-primary"  name="subscribe" id="subscribe" value="{{newletter_button}}">
+              </div>
+             
+            </form>
+            </div>
+          </div>
+
+         	<div class="col-md-3 col-sm-3 col-xs-6">
+			<div class="awe-media home-cate-media">
+            <div class="awe-media-header">
+              <div class="awe-media-image">
+                	<a href="{{settings.newsletter_url1}}"><img src="{{'newsletter_banner1.jpg'|asset_url}}" alt=""></a>
+                </div>
+                  </div>
+              </div>
+          </div>
+         <div class="col-md-3 col-sm-3 col-xs-6">
+			<div class="awe-media home-cate-media">
+            <div class="awe-media-header">
+              <div class="awe-media-image">
+           			<a href="{{settings.newsletter_url2}}"><img src="{{'newsletter_banner2.jpg'|asset_url}}" alt=""></a>
+ 				</div>
+                  </div>
+           </div>
+          </div>
+        </div>
+    </div>
+  </div><!-- /.container -->
+</section><!-- /section -->
