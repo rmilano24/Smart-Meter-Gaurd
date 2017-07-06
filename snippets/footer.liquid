@@ -73,26 +73,6 @@
       </div>
     </div><!-- /.footer-copyright -->
   </div><!-- /.footer-wrapper -->
-{% if footer_style !="style4" %}
-  <a href="#" class="back-top {% if settings.footer_style =="style5" %}footer-v5{%endif%}" title="">
-    {%if settings.backtop-svg%}
-    <span class="back-top-image backtop-retinal">
-      {{settings.svg_backtop_text}}
-    </span>
-    {%else%}
-    <span class="back-top-image">
-      <img src="{{ 'back-top.png' | asset_url }}" alt="">
-    </span>
-    {%endif%}
-	{% if footer_style !="style5" %}
-    <small>{{'layout.footer.back_to_top'|t}}</small>
-    {%endif%}
-  </a><!-- /.back-top -->
-  {%else%}
-  <a href="#" class="back-top button" title="">
-    <i class="fa fa-angle-up margin-top-10"></i>
-  </a><!-- /.back-top -->
- {% endif %}
 </footer><!-- /footer -->
 
 
