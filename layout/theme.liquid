@@ -45,6 +45,7 @@
   <!-- build:css css/styles.css -->
   {{ 'awe-background.scss.css' | asset_url | stylesheet_tag }}
   {{ 'main.scss.css' | asset_url | stylesheet_tag }}
+  {{ 'smg.scss.css' | asset_url | stylesheet_tag }}
   {{ 'update.scss.css' | asset_url | stylesheet_tag }}
   {{ 'docs.scss.css' | asset_url | stylesheet_tag }}
 
@@ -107,14 +108,14 @@
         </span>
         {%else%}
         <span class="icon icon-logo"></span>
-        {%endif%}      
-      </div>    
+        {%endif%}
+      </div>
     </div>
   </div>
   {%endif%}
   {%include 'header'%}
-  <main class="wrapper main-content {%if settings.header_style == "style5"%}fix-header-style5{%endif%}">       
-    {{ content_for_layout }}   
+  <main class="wrapper main-content {%if settings.header_style == "style5"%}fix-header-style5{%endif%}">
+    {{ content_for_layout }}
   </main>
   {%include 'footer'%}
 
@@ -123,7 +124,7 @@
   {{ 'engo.js' | asset_url | script_tag }}
   {% include 'linked-options' %}
   {% include 'quickview-template' %}
-  {% include 'template-popup' %} 
+  {% include 'template-popup' %}
   {% if template contains 'index' %}
   {% if settings.show_popup_newletter%}
   {% include 'popup' %}
@@ -148,7 +149,7 @@
   {{ 'masonry.pkgd.min.js' | asset_url | script_tag }}
   {{ 'isotope.pkgd.min.js' | asset_url | script_tag }}
   {{ 'imagesloaded.pkgd.min.js' | asset_url | script_tag }}
-    {{ 'instafeed.min.js' | asset_url | script_tag }} 
+    {{ 'instafeed.min.js' | asset_url | script_tag }}
   <!-- endbuild -->
 
   <!-- build:js js/main.js -->
@@ -199,8 +200,8 @@
     $('body').jpreLoader({
       splashID: "#awe-page-loading",
       loaderVPos: '50%',
-      autoClose: true,    
-      splashFunction: function() {  
+      autoClose: true,
+      splashFunction: function() {
         //passing Splash Screen script to jPreLoader
         $('#awe-page-loading').children('section').not('.selected').hide();
         $('#awe-page-loading').hide().fadeIn(900);

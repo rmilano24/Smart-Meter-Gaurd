@@ -79,8 +79,6 @@ html, body {
   {%endif%}
   {%endif%}
 
-
-
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -137,7 +135,7 @@ img {
   &:after {
     content: " "; // 1
     display: table; // 2
-  } 
+  }
   &:after {
     clear: both;
   }
@@ -3046,55 +3044,55 @@ B. Compoments
 .colors .{{settings.shop_by_color_text_1}}
 {
   background-color:{{settings.shop_by_color_1}};
-} 
+}
 {%endif%}
 {%if settings.shop_by_color_text_2 != '' and settings.shop_by_color_2!=''%}
 .colors .{{settings.shop_by_color_text_2}}
 {
   background-color:{{settings.shop_by_color_2}};
-} 
+}
 {%endif%}
 {%if settings.shop_by_color_text_3 != '' and settings.shop_by_color_3!=''%}
 .colors .{{settings.shop_by_color_text_3}}
 {
   background-color:{{settings.shop_by_color_3}};
-} 
+}
 {%endif%}
 {%if settings.shop_by_color_text_4 != '' and settings.shop_by_color_4!=''%}
 .colors .{{settings.shop_by_color_text_4}}
 {
   background-color:{{settings.shop_by_color_4}};
-} 
+}
 {%endif%}
 {%if settings.shop_by_color_text_5 != '' and settings.shop_by_color_5!=''%}
 .colors .{{settings.shop_by_color_text_5}}
 {
   background-color:{{settings.shop_by_color_5}};
-} 
+}
 {%endif%}
 {%if settings.shop_by_color_text_6 != '' and settings.shop_by_color_6!=''%}
 .colors .{{settings.shop_by_color_text_6}}
 {
   background-color:{{settings.shop_by_color_6}};
-} 
+}
 {%endif%}
 {%if settings.shop_by_color_text_7 != '' and settings.shop_by_color_7!=''%}
 .colors .{{settings.shop_by_color_text_7}}
 {
   background-color:{{settings.shop_by_color_7}};
-} 
+}
 {%endif%}
 {%if settings.shop_by_color_text_8 != '' and settings.shop_by_color_8!=''%}
 .colors .{{settings.shop_by_color_text_8}}
 {
   background-color:{{settings.shop_by_color_8}};
-} 
+}
 {%endif%}
 {%if settings.shop_by_color_text_9 != '' and settings.shop_by_color_9!=''%}
 .colors .{{settings.shop_by_color_text_9}}
 {
   background-color:{{settings.shop_by_color_9}};
-} 
+}
 {%endif%}
 
 .li-price input{
@@ -5601,7 +5599,7 @@ h2.entry-title {
 
 #open-filters {
   color: #fff;
-  
+
   background: #333;
   position: fixed;
   left: 0;
@@ -6782,7 +6780,7 @@ h2.entry-title {
   .section-customers .col-md-2 {
     text-align:center;
     margin-bottom:10px;
-  
+
   }
   .section-customers .col-md-10 h4{
   text-align:center;
@@ -9339,7 +9337,7 @@ main{
 /* ===========Table responsive================= */
 
 .table-responsive{
-  /* 
+  /*
   Max width before this PARTICULAR table gets nasty
   This query will take effect for any screen smaller than 760px
   and also iPads specifically.
@@ -9347,12 +9345,12 @@ main{
   @media only screen and (max-width: 760px),(min-device-width: 768px) and (max-device-width: 1024px)  {
 
     /* Force table to not be like tables anymore */
-    table, thead, tbody, th, td, tr { 
-      display: block; 
+    table, thead, tbody, th, td, tr {
+      display: block;
     }
 
     /* Hide table headers (but not display: none;, for accessibility) */
-    thead tr { 
+    thead tr {
       position: absolute;
       top: -9999px;
       left: -9999px;
@@ -9360,22 +9358,22 @@ main{
 
     tr { border: 1px solid #ccc; }
 
-    td { 
+    td {
       /* Behave  like a "row" */
       border: none;
-      border-bottom: 1px solid #eee; 
+      border-bottom: 1px solid #eee;
       position: relative;
-      padding-left: 50%; 
+      padding-left: 50%;
     }
 
-    td:before { 
+    td:before {
       /* Now like a table header */
       position: absolute;
       /* Top/left values mimic padding */
       top: 6px;
       left: 6px;
-      width: 45%; 
-      padding-right: 10px; 
+      width: 45%;
+      padding-right: 10px;
       white-space: nowrap;
     }
 
@@ -9385,16 +9383,16 @@ main{
 
   /* Smartphones (portrait and landscape) ----------- */
   @media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
-    body { 
-      padding: 0; 
-      margin: 0; 
+    body {
+      padding: 0;
+      margin: 0;
       width: 320px; }
   }
 
   /* iPads (portrait and landscape) ----------- */
   @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
-    body { 
-      width: 495px; 
+    body {
+      width: 495px;
     }
   }
 
@@ -9641,14 +9639,14 @@ main{
 
 /* slider */
  .rev_slider_wrapper{
-  .tp-caption{ 
+  .tp-caption{
     z-index: 9999;
 
 
     &.rv-heading{
       font-size: 80px;
       font-weight: bold;
-      letter-spacing: 15px; 
+      letter-spacing: 15px;
       text-transform: uppercase;
     }
 
@@ -9731,7 +9729,7 @@ main .main-slider .tp-caption.rv-button{
       }
     }
   }
-} 
+}
 
 .cate4-wrapper .no-gutter p.lineheight2{
   line-height:2;
@@ -9766,10 +9764,3 @@ width:100%;
   padding:0;
 
 }
-
-
-
-
-
-
-
