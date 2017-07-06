@@ -1,11 +1,10 @@
 [
   {
     "name": "theme_info",
-    "logo": "https:\/\/cdn.shopify.com\/s\/files\/1\/1231\/2222\/t\/2\/assets\/80x80.jpg",
     "settings": [
       {
         "type": "header",
-        "content": "Hosoren - Multi Store Responsive Shopify Theme"
+        "content": "Smart Meter Guard - Responsive Shopify Theme"
       },
       {
         "type": "paragraph",
@@ -13,11 +12,7 @@
       },
       {
         "type": "paragraph",
-        "content": "See the theme [Landing page and document](http:http:\/\/landing.engotheme.com\/shopify\/hosoren\/) for more information about this wonderful theme."
-      },
-      {
-        "type": "paragraph",
-        "content": "If you love this theme, please [Rate 5 stars](https:\/\/themeforest.net\/item\/hosoren-responsive-shopify-theme\/14443418), which will be a great motivation for us to continue create great themes in the future. [How to rate?](http:\/\/landing.engotheme.com\/library\/how-to-rate.png)"
+        "content": "Author [Ryan Milano](https:\/\/designbymilano.com)"
       }
     ]
   },
@@ -6749,17 +6744,6 @@
     "name": "Home page - Testimonial",
     "settings": [
       {
-        "type": "text",
-        "id": "testimonial_title",
-        "label": "Title",
-        "default": "Customer Say"
-      },
-      {
-        "type": "image",
-        "id": "testimonial_background.jpg",
-        "label": "Background"
-      },
-      {
         "type": "header",
         "content": "Item 1"
       },
@@ -6769,24 +6753,9 @@
         "label": "Enable"
       },
       {
-        "type": "image",
-        "id": "testimonial_img_1",
-        "label": "Image"
-      },
-      {
         "type": "text",
         "id": "testimonial_des_1",
         "label": "Description"
-      },
-      {
-        "type": "text",
-        "id": "testimonial_name_1",
-        "label": "Name"
-      },
-      {
-        "type": "text",
-        "id": "testimonial_work_1",
-        "label": "Work"
       },
       {
         "type": "header",
@@ -6798,24 +6767,9 @@
         "label": "Enable"
       },
       {
-        "type": "image",
-        "id": "testimonial_img_2",
-        "label": "Image"
-      },
-      {
         "type": "text",
         "id": "testimonial_des_2",
         "label": "Description"
-      },
-      {
-        "type": "text",
-        "id": "testimonial_name_2",
-        "label": "Name"
-      },
-      {
-        "type": "text",
-        "id": "testimonial_work_2",
-        "label": "Work"
       },
       {
         "type": "header",
@@ -6827,24 +6781,9 @@
         "label": "Enable"
       },
       {
-        "type": "image",
-        "id": "testimonial_img_3",
-        "label": "Image"
-      },
-      {
         "type": "text",
         "id": "testimonial_des_3",
         "label": "Description"
-      },
-      {
-        "type": "text",
-        "id": "testimonial_name_3",
-        "label": "Name"
-      },
-      {
-        "type": "text",
-        "id": "testimonial_work_3",
-        "label": "Work"
       },
       {
         "type": "header",
@@ -6856,24 +6795,9 @@
         "label": "Enable"
       },
       {
-        "type": "image",
-        "id": "testimonial_img_4",
-        "label": "Image"
-      },
-      {
         "type": "text",
         "id": "testimonial_des_4",
         "label": "Description"
-      },
-      {
-        "type": "text",
-        "id": "testimonial_name_4",
-        "label": "Name"
-      },
-      {
-        "type": "text",
-        "id": "testimonial_work_4",
-        "label": "Work"
       },
       {
         "type": "header",
@@ -6885,24 +6809,9 @@
         "label": "Enable"
       },
       {
-        "type": "image",
-        "id": "testimonial_img_5",
-        "label": "Image"
-      },
-      {
         "type": "text",
         "id": "testimonial_des_5",
         "label": "Description"
-      },
-      {
-        "type": "text",
-        "id": "testimonial_name_5",
-        "label": "Name"
-      },
-      {
-        "type": "text",
-        "id": "testimonial_work_5",
-        "label": "Work"
       },
       {
         "type": "header",
@@ -6914,24 +6823,9 @@
         "label": "Enable"
       },
       {
-        "type": "image",
-        "id": "testimonial_img_6",
-        "label": "Image"
-      },
-      {
         "type": "text",
         "id": "testimonial_des_6",
         "label": "Description"
-      },
-      {
-        "type": "text",
-        "id": "testimonial_name_6",
-        "label": "Name"
-      },
-      {
-        "type": "text",
-        "id": "testimonial_work_6",
-        "label": "Work"
       },
       {
         "type": "header",
@@ -6943,24 +6837,9 @@
         "label": "Enable"
       },
       {
-        "type": "image",
-        "id": "testimonial_img_7",
-        "label": "Image"
-      },
-      {
         "type": "text",
         "id": "testimonial_des_7",
         "label": "Description"
-      },
-      {
-        "type": "text",
-        "id": "testimonial_name_7",
-        "label": "Name"
-      },
-      {
-        "type": "text",
-        "id": "testimonial_work_7",
-        "label": "Work"
       },
       {
         "type": "header",
@@ -6972,24 +6851,9 @@
         "label": "Enable"
       },
       {
-        "type": "image",
-        "id": "testimonial_img_8",
-        "label": "Image"
-      },
-      {
         "type": "text",
         "id": "testimonial_des_8",
         "label": "Description"
-      },
-      {
-        "type": "text",
-        "id": "testimonial_name_8",
-        "label": "Name"
-      },
-      {
-        "type": "text",
-        "id": "testimonial_work_8",
-        "label": "Work"
       }
     ]
   },
