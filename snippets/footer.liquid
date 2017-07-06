@@ -74,36 +74,3 @@
     </div><!-- /.footer-copyright -->
   </div><!-- /.footer-wrapper -->
 </footer><!-- /footer -->
-
-
-
-{%if settings.contact_map and settings.footer_style == "style5"%}
-  <script type="text/javascript">
-
-    $(function() {
-      aweMaps();
-
-      $('#contact-form').on('submit', function() {
-        var $form = $(this);
-        var data = $(this).serialize();
-
-        $.ajax({
-          url: 'contact.php',
-          type: 'POST',
-          data: data,
-        })
-        .done(function(res) {
-          if (res && ! $(res).hasClass('failure')) {
-            $form.find('input, textarea').val('');
-          }
-        })
-        .always(function(res) {
-          $('#ajax-message').html(res);
-        });
-
-        return false;
-      });
-    });
-
-  </script>
-  {%endif%}
