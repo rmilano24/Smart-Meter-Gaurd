@@ -17,7 +17,7 @@
 {% assign footer_style = settings.footer_style%}
 
  {%if settings.contact_map and settings.footer_style == "style5"%}
-    <div class="contact-map" id="contact-map"  data-lat="{{settings.contact_map_1}}" data-lng="{{settings.contact_map_2}}">
+    <div style="display: none;" class="contact-map" id="contact-map"  data-lat="{{settings.contact_map_1}}" data-lng="{{settings.contact_map_2}}">
       <!-- // -->
     </div><!-- /.contact-map -->
     {%endif%}
@@ -54,7 +54,7 @@
           <nav>
             <ul>
               {% for link in linklists[footer_menu].links %}
-              <li><a href="{{ link.url }}">{{ link.title }}</a></li>   
+              <li><a href="{{ link.url }}">{{ link.title }}</a></li>
               {% endfor %}
 
             </ul>
@@ -76,11 +76,11 @@
 {% if footer_style !="style4" %}
   <a href="#" class="back-top {% if settings.footer_style =="style5" %}footer-v5{%endif%}" title="">
     {%if settings.backtop-svg%}
-    <span class="back-top-image backtop-retinal">    
-      {{settings.svg_backtop_text}}                
+    <span class="back-top-image backtop-retinal">
+      {{settings.svg_backtop_text}}
     </span>
     {%else%}
-    <span class="back-top-image">               
+    <span class="back-top-image">
       <img src="{{ 'back-top.png' | asset_url }}" alt="">
     </span>
     {%endif%}
