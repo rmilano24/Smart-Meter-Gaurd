@@ -1,6 +1,6 @@
 
 <section>
-  <div class="home12-testimonial"  style="background-image: url({{'testimonial_background.jpg'| asset_url}})" >
+  <div class="home12-testimonial">
   {% capture title %}testimonial_title{% endcapture %}
   {% capture background %}testimonial_img.jpg{% endcapture %}
   <div class="container">
@@ -20,13 +20,13 @@
               {% capture work %}testimonial_work_{{ i }}{% endcapture %}
 			  {% capture img %}testimonial_img_{{ i }}{% endcapture %}
 
-              {% if settings[enable] %} 
+              {% if settings[enable] %}
               <div class="row">
                 <div class="col-md-12 col-sm-12 ">
                   {{ img | asset_url | img_tag }}
                 </div>
                 <div class="col-md-12  col-sm-12">
-                
+
                 <p>“{{settings[des]}}“</p>
                   <h4 class="upper">{{settings[name]}}</h4>
                   <p>{{settings[work]}}</p>
