@@ -51,24 +51,7 @@
         </div>
 
         <div class="footer-nav">
-          <nav>
-            <ul>
-              {% for link in linklists[footer_menu].links %}
-              <li><a href="{{ link.url }}">{{ link.title }}</a></li>
-              {% endfor %}
-
-            </ul>
-          </nav>
-
-          <nav>
-            <ul>
-              {%if settings.show_multiple_currencies%}
-
-              {% include 'currency-picker' %}
-              {%endif%}
-
-            </ul>
-          </nav>
+          <a target="_blank" href="https://www.designbymilano.com/">Website by</a>
         </div>
       </div>
     </div><!-- /.footer-copyright -->
