@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="23px" height="12px" viewBox="0 0 23 12" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 45.1 (43504) - http://www.bohemiancoding.com/sketch -->
+    <title>bg_wave-texture@3x</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Concept-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Home-V2" transform="translate(-50.000000, -3025.000000)">
+            <g id="bg_wave-texture" transform="translate(50.000000, 3024.000000)">
+                <image id="white-wave" opacity="0.693274457" x="0" y="1" width="23" height="12" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABcAAAAMCAYAAACJOyb4AAAABGdBTUEAA1teXP8meAAAAeZJREFUOBHtk0FLAkEUx3cVHHHFg5CsslIQhAQdxItQ0EEQ+gSKiCCIn0A8e1TwJHoQRC8qevRSEHhIPAilQoc8pYWCgmCwqKi42nvWQO4h6d7AMDtv/jNv3m/+y5ZKJafb7X5gGGYJncTjcX46nS4jkcgI5gzMj81ms1WhUOg2m43Y7/fboVDoHddAwxuNRq5Wq40LhYKIsWKxeK1SqU5BO2Pz+bwdJtbVatX2er0NFGCz2WyacDjsVCqVelEUG6lU6s3v9ws8z19hklgsdttsNudfaobJZrPnWq32er1evzxDM5lMHPu9SMrlspNlWWG73Q5g1ED8aLFYNHw+3xM9gI6ZTMaq0+nsoBMxEVzgCG/aarXuo9HoB9WxWIbH46lDQIJO0um0MBwOZxQLlm6xWHZYIPG80+k8/lyTY0EShJB9LFh6IBBo06yYCKq5oViq1erA4XAIeGNJkiYul+sONPhOu5ZMJs8MBoMDKnjtdrttQK3ZwwIH8cBsAI/HwQ7+EBbQjL+x8PAtwRvc7mGRu0WO5Te3JBIJARCQXq83oYf+2S2j0aiey+UGwWDQqNfrL5H9Ibeo1WpCsSixAsBxAhuH4AICZe4sKHsHCDMMJLrgOO5K7pZKpXJH/Y46Vo7l/ydCLJ/19qJlhqLgZQAAAABJRU5ErkJggg=="></image>
+                <rect id="Rectangle-9" fill="#1EB6DC" style="mix-blend-mode: multiply;" x="0" y="0" width="23" height="13"></rect>
+            </g>
+        </g>
+    </g>
+</svg>
