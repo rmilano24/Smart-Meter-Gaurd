@@ -2242,6 +2242,10 @@
         "label": "Delay",
         "options": [
           {
+            "value": "0",
+            "label": "none"
+          },
+          {
             "value": "1000",
             "label": "1 seconds"
           },

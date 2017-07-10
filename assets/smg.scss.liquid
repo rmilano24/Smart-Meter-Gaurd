@@ -1,7 +1,12 @@
-// GLOBAL
+/*
 
-// font-family: 'Open Sans', sans-serif;
-// font-family: 'Montserrat', sans-serif;
+THEME: SMART METER GUARD
+AUTHOR: RYAN MILANO
+WWW.DESIGNBYMILANO.COM
+
+*/
+
+// GLOBAL
 
 body {
   font-family: 'Open Sans', sans-serif;
@@ -171,10 +176,22 @@ footer {
   margin: 0 auto !important;
   display: block;
   position: absolute !important;
-  left: 30% !important;
+  left: 25% !important;
   background: url({{ 'seperator-white.svg' | asset_url }}) no-repeat center bottom;
   line-height: 130px !important;
   font-size: 60px !important;
+}
+
+.tp-caption:last-of-type {
+  border: 1px solid red !important;
+  font-size: 18px !important;
+  font-family: 'Open Sans', sans-serif !important;
+  background-image: none !important;
+}
+
+.rv-button {
+  font-size: 15px !important;
+  line-height: 20px !important;
 }
 
 // .slotholder:after {
@@ -188,3 +205,17 @@ footer {
 //   background-repeat: repeat-x;
 //   opacity: 0.8;
 // }
+
+// FAQ'S
+
+.panel-heading .accordion-toggle:after {
+    /* symbol for "opening" panels */
+    font-family: 'Glyphicons Halflings';  /* essential for enabling glyphicon */
+    content: "\e114";    /* adjust as needed, taken from bootstrap.css */
+    float: right;        /* adjust as needed */
+    color: grey;         /* adjust as needed */
+}
+.panel-heading .accordion-toggle.collapsed:after {
+    /* symbol for "collapsed" panels */
+    content: "\e080";    /* adjust as needed, taken from bootstrap.css */
+}
