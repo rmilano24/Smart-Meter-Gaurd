@@ -11,10 +11,16 @@ WWW.DESIGNBYMILANO.COM
 body {
   font-family: 'Open Sans', sans-serif;
   color: #787878;
+  font-size: 15px;
+  line-height: 24px;
 }
 
 h1,h2,h3,h4,h5 {
   font-family: 'Montserrat', Arial, sans-serif;
+}
+
+a {
+  color: #1EB6DC;
 }
 
 main {
@@ -288,4 +294,23 @@ footer {
 
 .panel-group .panel+.panel {
   margin-top: 20px;
+}
+
+// ABOUT
+
+#about-us {
+  .wysiwyg {
+    column-count: 2;
+    column-fill: balance;
+    -moz-column-fill: balance;
+    -webkit-column-fill: balance;
+    column-gap: 80px;
+    p:first-of-type:first-letter {
+        font-size: 35px;
+        line-height: 0px;
+    }
+    address {
+      font-style: italic !important;
+    }
+  }
 }
