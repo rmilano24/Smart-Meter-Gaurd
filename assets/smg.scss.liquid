@@ -10,6 +10,7 @@ WWW.DESIGNBYMILANO.COM
 
 body {
   font-family: 'Open Sans', sans-serif;
+  color: #787878;
 }
 
 h1,h2,h3,h4,h5 {
@@ -212,18 +213,6 @@ footer {
   line-height: 20px !important;
 }
 
-// .slotholder:after {
-//   content: '';
-//   position: absolute;
-//   width: inherit;
-//   height: inherit;
-//   top: 0;
-//   left: 0;
-//   background-image: linear-gradient(-90deg, #1EB6DC 2%, #F03454 98%);
-//   background-repeat: repeat-x;
-//   opacity: 0.8;
-// }
-
 // FAQ'S
 
 .panel-title>a, .panel-title>a:active{
@@ -239,13 +228,55 @@ footer {
 }
 .panel-heading  a:before {
    content: ">";
+   padding-right: 10px;
    float: left;
    transition: all 0.5s;
    color: #1EB6DC;
-   font-size: 20px !important;
+   font-size: 24px !important;
+   position: relative;
+   top: -5px;
 }
 .panel-heading.active a:before {
 	-webkit-transform: rotate(90deg);
 	-moz-transform: rotate(90deg);
 	transform: rotate(90deg);
+  top: 1px;
+}
+
+.panel {
+  box-shadow: none !important;
+  border-radius: 0px !important;
+  border: 1px solid #F1F3F7;
+  .panel-heading {
+    background: #fff;
+    border-top-right-radius: 0px;
+    border-top-left-radius: 0px;
+    padding: 0px;
+  }
+}
+
+.panel-group .panel-heading+.panel-collapse>.panel-body, .panel-group .panel-heading+.panel-collapse>.list-group {
+  border-top: none !important;
+}
+
+.panel-title {
+  padding: 5px 0;
+}
+
+.panel-title>a {
+  font-weight: normal !important;
+  color: #323333 !important;
+  font-size: 16px !important;
+}
+
+.panel-body {
+  padding-top: 0px;
+  font-size: 15px;
+  line-height: 24px;
+  padding-left: 38px;
+  margin-top: -5px;
+}
+
+.panel-group .panel+.panel {
+  margin-top: 20px;
 }
