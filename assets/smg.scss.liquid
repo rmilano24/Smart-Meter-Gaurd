@@ -58,6 +58,7 @@ header {
     padding: 10px 0;
     height: 102px;
     z-index: 10 !important;
+    border-bottom: 1px solid #F1F3F7;
     .navbar-icons {
       border-left: none;
       border-right: none;
@@ -323,5 +324,26 @@ footer {
 .template-product {
   main {
     margin-top: 60px;
+    h1 {
+      font-weight: normal;
+      font-size: 28px;
+      letter-spacing: 1px;
+      color: #323333;
+    }
+    .product-details-wrapper .product-features h3 {
+      color: #323333;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+    .product-details-wrapper .product-features ul>li:before {
+      content: ">";
+      font-weight: bold;
+      color: #F03454;
+      font-size: 22px;
+    }
+    .product-details-wrapper .product-price label {
+      color: #323333;
+      font-size: 38px;
+    }
   }
 }

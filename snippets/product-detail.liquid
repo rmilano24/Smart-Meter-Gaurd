@@ -35,7 +35,7 @@
         <meta itemprop="priceCurrency" content="{{ shop.currency }}">
         <link itemprop="availability" href="http://schema.org/{% if product.available %}InStock{% else %}OutOfStock{% endif %}">
         <h1 class="product-name" itemprop="name">
-          <a href="{{product.url}}" title=" {{product.title}}"> {{product.title}}</a>
+          {{product.title}}
         </h1><!-- /.product-name -->
 
         <div class="product-status">
@@ -94,7 +94,7 @@
               </div>
             </div>
 
-            <div class="product-list-actions"> 
+            <div class="product-list-actions">
 
               <div class="product-single-prices product-price">
                 <label id="ProductPrice" class="price" itemprop="price">
@@ -123,29 +123,8 @@
 
           </form>
         </div><!-- /.product-actions-wrapper -->
-        {%if settings.show_category%}
-        <div class="product-meta">
-          <span class="product-category">
-            <label>Category:</label>
-            {% for collection in product.collections %}
-            <a href="{{collection.url}}" title="{{ collection.title }}">{{ collection.title }}</a>
-            {% endfor %}
+        
 
-          </span>
-          {%endif%}
-          {%if settings.show_tag and settings.show_category%}
-          <span>-</span>
-          {%endif%}
-          {%if settings.show_tag%}
-          <span class="product-tags">
-            <label>{{'sidebar.tag'|t}}:</label>
-            {% for tag in product.tags %}
-            <a href="/collections/all?constraint={{ tag | handle }}" title=" {{ tag }}"> {{ tag }}</a>
-            {% endfor %}
-
-
-          </span>
-          {%endif%}
         </div><!-- /.product-meta -->
       </div><!-- /.product-details-wrapper -->
     </div>
@@ -183,7 +162,7 @@
       <div class="tab-content">
         {%if settings.show_des_tab%}
         <div role="tabpanel" class="tab-pane active" id="product-description">
-          <div>{{product.description}} 
+          <div>{{product.description}}
 
           </div>
 
@@ -225,32 +204,32 @@
 
     if (!unitPriceTextMatch) {
       regex = /([0-9]+[.|,][0-9]+)/g;
-      unitPriceTextMatch = jQuery('.xprice').text().match(regex);     
+      unitPriceTextMatch = jQuery('.xprice').text().match(regex);
     }
 
     if (unitPriceTextMatch) {
-      var unitPriceText = unitPriceTextMatch[0];     
+      var unitPriceText = unitPriceTextMatch[0];
       var unitPrice = unitPriceText.replace(/[.|,]/g,'');
       var quantity = parseInt(jQuery('#Quantity').val());
       var totalPrice = unitPrice * quantity;
 
 
       var totalPriceText = Shopify.formatMoney(totalPrice, window.money_format);
-      regex = /([0-9]+[.|,][0-9]+[.|,][0-9]+)/g;     
+      regex = /([0-9]+[.|,][0-9]+[.|,][0-9]+)/g;
       if (!totalPriceText.match(regex)) {
         regex = /([0-9]+[.|,][0-9]+)/g;
-      } 
+      }
       totalPriceText = totalPriceText.match(regex)[0];
 
-      var regInput = new RegExp(unitPriceText, "g"); 
+      var regInput = new RegExp(unitPriceText, "g");
       var totalPriceHtml = jQuery('.xprice').html().replace(regInput ,totalPriceText);
-      $('.product-list-actions .product-price .price').html(totalPriceHtml);     
+      $('.product-list-actions .product-price .price').html(totalPriceHtml);
     }
      currency();
   }
-  jQuery('#Quantity').on('change', updatePricing); 
+  jQuery('#Quantity').on('change', updatePricing);
 
-  var selectCallback1 = function(variant, selector) { 
+  var selectCallback1 = function(variant, selector) {
     var moneyFormat = '{{ shop.money_format }}';
     // Selectors
     var $productImage = $('#ProductPhotoImg'),
@@ -274,7 +253,7 @@
       $('#ProductPhotoImg').attr('src',variant.featured_image.src);
       $('.cloud-zoom').attr('href',variant.featured_image.src);
       $(".cloud-zoom").CloudZoom();
-      
+
     }
   };
 
@@ -342,9 +321,6 @@
 
   });
 
- 
+
 
 </script>
-
-
-
