@@ -1,0 +1,66 @@
+<link href="https://cdn.rawgit.com/sachinchoolur/lightgallery.js/master/dist/css/lightgallery.css" rel="stylesheet">
+
+
+
+<!-- {% include 'breadcrumb' %} -->
+<div class="container">
+  <h1>{{ page.title }}</h1>
+  <div class="seperator-red"></div>
+  <div class="wysiwyg">
+    {{ page.content }}
+
+    <div class="demo-gallery dark mrb35">
+                  <ul id="videos" class="list-unstyled row">
+                       <li class="col-xs-6 col-sm-4 col-md-3 video" data-poster="//cdn.shopify.com/s/files/1/2143/8365/t/2/assets/th_1@2x.jpg" data-src="https://www.youtube.com/watch?v=meBbDqAXago" data-sub-html="<h4>Rollin`Wild - Short Funny Animated Clips - Film Academy BW</h4>">
+                          <a href="">
+                              <img class="img-responsive" src="//cdn.shopify.com/s/files/1/2143/8365/t/2/assets/th_1@2x.jpg">
+                              <div class="demo-gallery-poster">
+                                  <img src="../static/img/play-button.png">
+                              </div>
+                          </a>
+                      </li>
+                      <li class="col-xs-6 col-sm-4 col-md-3 video" data-poster="../static/img/videos/y-video2-cover.jpg" data-src="https://www.youtube.com/watch?v=Pq9yPrLWMyU" data-sub-html="<h4>CGI Animated Short HD: Student Academy Award Winning 'PeckPocketed' by Kevin Herron</h4>">
+                          <a href="">
+                              <img class="img-responsive" src="../static/img/thumb-v-y-2.jpg">
+                              <div class="demo-gallery-poster">
+                                  <img src="../static/img/play-button.png">
+                              </div>
+                          </a>
+                      </li>
+                      <li class="col-xs-6 col-sm-4 col-md-3 video" data-poster="../static/img/videos/v-video1-cover.jpg" data-src="https://vimeo.com/1084537" data-sub-html="<h4>Big Buck Bunny</h4>">
+                          <a href="">
+                              <img class="img-responsive" src="../static/img/thumb-v-v-1.jpg">
+                              <div class="demo-gallery-poster">
+                                  <img src="../static/img/play-button.png">
+                              </div>
+                          </a>
+                      </li>
+                      <li class="col-xs-6 col-sm-4 col-md-3 video" data-poster="../static/img/videos/v-video2-cover.jpg" data-src="https://vimeo.com/35451452" data-sub-html="<h4>Ninja vs Pirate</h4>">
+                          <a href="">
+                              <img class="img-responsive" src="../static/img/thumb-v-v-2.jpg">
+                              <div class="demo-gallery-poster">
+                                  <img src="../static/img/play-button.png">
+                              </div>
+                          </a>
+                      </li>
+                  </ul>
+              </div>
+
+
+  </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/picturefill/2.3.1/picturefill.min.js"></script>
+<script src="https://cdn.rawgit.com/sachinchoolur/lightgallery.js/master/dist/js/lightgallery.js"></script>
+<script src="https://cdn.rawgit.com/sachinchoolur/lg-pager.js/master/dist/lg-pager.js"></script>
+<script src="https://cdn.rawgit.com/sachinchoolur/lg-autoplay.js/master/dist/lg-autoplay.js"></script>
+<script src="https://cdn.rawgit.com/sachinchoolur/lg-fullscreen.js/master/dist/lg-fullscreen.js"></script>
+<script src="https://cdn.rawgit.com/sachinchoolur/lg-zoom.js/master/dist/lg-zoom.js"></script>
+<script src="https://cdn.rawgit.com/sachinchoolur/lg-hash.js/master/dist/lg-hash.js"></script>
+<script src="https://cdn.rawgit.com/sachinchoolur/lg-share.js/master/dist/lg-share.js"></script>
+<script src="https://f.vimeocdn.com/js/froogaloop2.min.js"></script>
+{{ 'lg-video.js' | asset_url | script_tag }}
+
+<script>
+$('#videos').lightGallery();
+</script>
