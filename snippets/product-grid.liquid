@@ -11,7 +11,7 @@
 {% assign sold_out_text = 'products.product.sold_out' | t %}
 {% if product.available %}
 {% assign sold_out = false %}
-{% endif %} 
+{% endif %}
 
 <div class="product product-grid product-item clearfix">
   <div id="product-{{ product.id }}" class="product-inner" data-publish-date="{{ product.published_at }}">
@@ -20,9 +20,9 @@
         <a href="{{ product.url | within: collection }}" title="">
           <img class="product-featured-image" src="{{ product.featured_image.src | img_url: 'large' }}" alt="{{ product.featured_image.alt | escape }}">
 
-          {% for image in product.images %}     
+          {% for image in product.images %}
           {% if forloop.last == true %}
-          <img src="{{ image.src | product_img_url: 'large' }}" alt="{{ product.featured_image.alt | escape }}">   
+          <img class="product-featured-image" src="{{ product.featured_image.src | img_url: 'large' }}" alt="{{ product.featured_image.alt | escape }}">
           {%endif%}
 
           {% endfor %}
@@ -42,7 +42,7 @@
 
       <div class="product-hover">
         <div class="product-actions">
-          <form action="/cart/add" method="post" class="variants" id="AddToCartForm-{{ product.id }}" enctype="multipart/form-data">    
+          <form action="/cart/add" method="post" class="variants" id="AddToCartForm-{{ product.id }}" enctype="multipart/form-data">
             {% if sold_out %}
             <a class="btn-select-option awe-button product-add-cart" data-toggle="tooltip" title="{{settings.product_add_cart}}" href="{{product.url}}" ><i class="icon icon-shopping-bag"></i></a>
             {% else %}
@@ -50,13 +50,13 @@
             {% if product.available and product.variants.size > 1 %}
 
             <a class="btn-select-option awe-button product-add-cart" data-toggle="tooltip" title="{{settings.product_options}}" href="{{product.url}}" ><i class="icon icon-shopping-bag"></i></a>
-            {% else %}      
-            <input type="hidden" name="id" value="{{ product.variants[0].id }}" />           
+            {% else %}
+            <input type="hidden" name="id" value="{{ product.variants[0].id }}" />
             <a class="btn-addToCart awe-button product-add-cart" data-toggle="tooltip" title="{{settings.product_add_cart}}" href="javascript:void(0)" ><i class="icon icon-shopping-bag"></i></a>
             {% endif %}
 
             {% endif %}
-          </form>  
+          </form>
 
 
           {%include 'add-to-wishlist'%}
@@ -84,7 +84,7 @@
     <div class="product-body">
       <h2 class="product-name">
 
-        <a href="{{ product.url | within: collection }}" title="{{ product.title }}" >{{ product.title }}</a> 
+        <a href="{{ product.url | within: collection }}" title="{{ product.title }}" >{{ product.title }}</a>
       </h2><!-- /.product-product -->
 
       <div class="product-category">
@@ -107,6 +107,5 @@
 
 
   </div>
- 
-</div><!-- /.product -->
 
+</div><!-- /.product -->
