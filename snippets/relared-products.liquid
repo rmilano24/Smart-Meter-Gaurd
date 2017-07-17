@@ -1,7 +1,7 @@
 
 {%if  settings.upsel_style == 'collection'%}
 
-    {% assign number_of_products = 6 %}
+    {% assign number_of_products = 3 %}
     {% assign number_of_products_to_fetch = number_of_products | plus: 1 %}
 
     {% if collection == null or collection.handle == 'frontpage' or collection.handle == 'all' %}
@@ -21,7 +21,7 @@
         <h3 class="upper">{{settings.upsell_product_title}}</h3>
       </div>
 
-      <div class="products owl-carousel" data-items="4">
+      <div class="products owl-carousel" data-items="3">
 
         {% assign current_product = product %}
         {% assign current_product_found = false %}
@@ -44,7 +44,7 @@
 
     {% endif %}
 {%elsif  settings.upsel_style == 'tags'%}
-{% assign number_of_related_products_to_show = 12 %}
+{% assign number_of_related_products_to_show = 3 %}
 
 
 {% assign current_product = product %}
