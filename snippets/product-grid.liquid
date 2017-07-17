@@ -13,7 +13,7 @@
 {% assign sold_out = false %}
 {% endif %}
 
-<div class="product product-grid product-item clearfix">
+<div class="product product-grid product-item clearfix" style="border: 1px solid red;">
   <div id="product-{{ product.id }}" class="product-inner" data-publish-date="{{ product.published_at }}">
     <div class="product-media ">
       <div class="product-thumbnail">
@@ -86,13 +86,6 @@
 
         <a href="{{ product.url | within: collection }}" title="{{ product.title }}" >{{ product.title }}</a>
       </h2><!-- /.product-product -->
-
-      <div class="product-category">
-
-        <span>{{product.type}}</span>
-
-
-      </div><!-- /.product-category -->
 
       <div class="product-price">
         <span class="amout">
