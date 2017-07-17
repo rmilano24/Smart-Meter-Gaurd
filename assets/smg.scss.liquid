@@ -131,7 +131,7 @@ footer {
       .widget-title {
         font-size: 20px;
         margin-top: 15px;
-        margin-bottom: 39px;
+        margin-bottom: 42px;
       }
       a {
         color: #1EB6DC;
@@ -141,6 +141,7 @@ footer {
         font-weight: normal;
       }
       ul {
+        margin-top: -3px;
         li {
           a {
             padding-top: 0px;
@@ -455,6 +456,22 @@ footer {
     &:last-of-type {
       margin-bottom: 0px;
     }
+  }
+  .fancybox-arrow {
+    opacity: 1;
+    &:after {
+      background-color: transparent !important;
+      background-image: url({{ 'arrow_next.svg' | asset_url }}) !important;
+      background-size: 66px 57px;
+      width: 48px;
+      height: 57px;
+    }
+  }
+  .fancybox-arrow--left {
+    margin-left: 50px;
+  }
+  .fancybox-arrow--right {
+    margin-right: 50px;
   }
 }
 
