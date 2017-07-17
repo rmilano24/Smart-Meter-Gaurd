@@ -13,7 +13,7 @@
 {% assign sold_out = false %}
 {% endif %}
 
-<div class="product product-grid product-item clearfix" style="border: 1px solid red;">
+<div class="product product-grid product-item clearfix">
   <div id="product-{{ product.id }}" class="product-inner" data-publish-date="{{ product.published_at }}">
     <div class="product-media ">
       <div class="product-thumbnail">
@@ -40,32 +40,6 @@
 
       {% endif %}
 
-      <div class="product-hover">
-        <div class="product-actions">
-          <form action="/cart/add" method="post" class="variants" id="AddToCartForm-{{ product.id }}" enctype="multipart/form-data">
-            {% if sold_out %}
-            <a class="btn-select-option awe-button product-add-cart" data-toggle="tooltip" title="{{settings.product_add_cart}}" href="{{product.url}}" ><i class="icon icon-shopping-bag"></i></a>
-            {% else %}
-
-            {% if product.available and product.variants.size > 1 %}
-
-            <a class="btn-select-option awe-button product-add-cart" data-toggle="tooltip" title="{{settings.product_options}}" href="{{product.url}}" ><i class="icon icon-shopping-bag"></i></a>
-            {% else %}
-            <input type="hidden" name="id" value="{{ product.variants[0].id }}" />
-            <a class="btn-addToCart awe-button product-add-cart" data-toggle="tooltip" title="{{settings.product_add_cart}}" href="javascript:void(0)" ><i class="icon icon-shopping-bag"></i></a>
-            {% endif %}
-
-            {% endif %}
-          </form>
-
-
-          {%include 'add-to-wishlist'%}
-
-          <a href="javascript:void(0)" id="{{ product.handle }}" class="awe-button product-quick-view btn-quickview" data-toggle="tooltip" title="{{settings.product_quickview}}">
-            <i class="icon icon-eye"></i>
-          </a>
-        </div>
-      </div><!-- /.product-hover -->
       {%if settings.show_sale_label%}
       {% if on_sale %}
       <span class="product-label sale">
