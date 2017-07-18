@@ -108,7 +108,7 @@
               {{ settings[button] }}
             </a>
             {%if settings[show_category]%}
-            <a href="{{settings[url_category]}}" class="tp-caption {{settings[bEffect]}} rv-button btn btn-white btn-outline" {% if settings[bStyle] != "" %}style="{{bStyle}}" {% endif %} data-x="{{settings[category_x]}}" data-y="{{settings[category_y]}}" data-endspeed="500" data-speed="500" data-start="1700" data-easing="Linear.easeNone" data-elementdelay="0.1" data-endelementdelay="0.1">
+            <a href="{{settings[url_category]}}" data-fancybox="" class="tp-caption {{settings[bEffect]}} rv-button btn btn-white btn-outline" {% if settings[bStyle] != "" %}style="{{bStyle}}" {% endif %} data-x="{{settings[category_x]}}" data-y="{{settings[category_y]}}" data-endspeed="500" data-speed="500" data-start="1700" data-easing="Linear.easeNone" data-elementdelay="0.1" data-endelementdelay="0.1">
               {{ settings[name_category] }}
             </a>
             {%endif%}

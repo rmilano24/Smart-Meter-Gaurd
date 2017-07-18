@@ -2771,7 +2771,7 @@
       {
         "type": "text",
         "id": "slide_1_button_category_link",
-        "label": "Category url",
+        "label": "Video url",
         "default": "#"
       },
       {
@@ -3391,7 +3391,7 @@
       {
         "type": "text",
         "id": "slide_2_button_category_link",
-        "label": "Category url",
+        "label": "Video url",
         "default": "#"
       },
       {
@@ -3999,7 +3999,7 @@
       {
         "type": "text",
         "id": "slide_3_button_category_link",
-        "label": "Category url",
+        "label": "Video url",
         "default": "#"
       },
       {
@@ -4607,7 +4607,7 @@
       {
         "type": "text",
         "id": "slide_4_button_category_link",
-        "label": "Category url",
+        "label": "Video url",
         "default": "#"
       },
       {
@@ -5215,7 +5215,7 @@
       {
         "type": "text",
         "id": "slide_5_button_category_link",
-        "label": "Category url",
+        "label": "Video url",
         "default": "#"
       },
       {
