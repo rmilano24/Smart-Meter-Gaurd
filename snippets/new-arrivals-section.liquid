@@ -12,15 +12,16 @@
 
       <div class="arrivals">
         <div class="section-header center">
-          <h2>{{title}}</h2>
+          <h1>{{title}}</h1>
+          <div class="seperator-red"></div>
         </div><!-- /.section-header -->
 
         <div class=" {% for product in collections[col].products limit: products_limit %}{%else%}helper-section{%endfor%} ">
 
-        <div class="products home-products owl-carousel" data-items="4">
+        <div class="products home-products owl-carousel" data-items="3">
 
-          {% for product in collections[col].products limit: settings.new_arrival_limit%}         
-          {% include 'product-grid' %}
+          {% for product in collections[col].products limit: settings.new_arrival_limit%}
+          {% include 'product-grid-home' %}
           {%else%}
 
           {%include 'product-grid-sample'%}
@@ -29,11 +30,10 @@
           {% endfor %}
 
         </div><!-- /.products -->
-        
 
-      </div> 
+
+      </div>
       </div><!-- /.arrivals -->
     </div>
   </div><!-- /.container -->
 </section><!-- /section -->
- 
