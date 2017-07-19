@@ -240,6 +240,28 @@ main .main-slider .tp-caption.rv-button.btn-white.btn-outline {
 }
 
 
+.container-full-width {
+  .product:nth-child(even) {
+     .row {
+       .product-container {
+         -webkit-flex-direction: row-reverse; /* Safari */
+          flex-direction: row-reverse;
+          display: -webkit-flex; /* Safari */
+          display: flex;
+          img {
+            -moz-transform: scaleX(-1);
+        -o-transform: scaleX(-1);
+        -webkit-transform: scaleX(-1);
+        transform: scaleX(-1);
+        filter: FlipH;
+        -ms-filter: "FlipH";
+          }
+       }
+     }
+  }
+}
+
+
 
 
 // FAQ'S
@@ -388,6 +410,7 @@ main .main-slider .tp-caption.rv-button.btn-white.btn-outline {
       font-size: 28px;
       letter-spacing: 1px;
       color: #323333;
+      text-align: left;
     }
     .product-details-wrapper .product-features h3 {
       color: #323333;

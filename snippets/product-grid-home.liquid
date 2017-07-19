@@ -15,83 +15,89 @@
 
 <div class="product product-grid product-item clearfix">
   <div id="product-{{ product.id }}" class="product-inner" data-publish-date="{{ product.published_at }}">
-    <div class="product-media ">
-      <div class="product-thumbnail">
-        <a href="{{ product.url | within: collection }}" title="">
-          <img class="product-featured-image" src="{{ product.featured_image.src | img_url: 'large' }}" alt="{{ product.featured_image.alt | escape }}">
+    <div class="row">
+      <div class="product-container">
+      <div class="col-md-6">
+        <div class="product-media " >
+          <div class="product-thumbnail">
+            <a href="{{ product.url | within: collection }}" title="">
+              <img class="product-featured-image" src="{{ product.featured_image.src | img_url: 'large' }}" alt="{{ product.featured_image.alt | escape }}">
 
-          {% for image in product.images %}
-          {% if forloop.last == true %}
-          <img class="product-featured-image" src="{{ product.featured_image.src | img_url: 'large' }}" alt="{{ product.featured_image.alt | escape }}">
+              {% for image in product.images %}
+              {% if forloop.last == true %}
+              <img class="product-featured-image" src="{{ product.featured_image.src | img_url: 'large' }}" alt="{{ product.featured_image.alt | escape }}">
+              {%endif%}
+
+              {% endfor %}
+
+            </a>
+          </div><!-- /.product-thumbnail -->
+          {% if sold_out%}
+          <div class="product-soldout">
+            <div class="fp-table">
+              <div class="fp-table-cell">
+                <span class="soldout">{{sold_out_text}}</span>
+              </div>
+            </div>
+          </div>
+
+          {% endif %}
+
+          {%if settings.show_sale_label%}
+          {% if on_sale %}
+          <span class="product-label sale">
+            <span>{{'collections.products.sale'|t}}</span>
+          </span>
+          {% endif %}
+          {% endif %}
+          {%if settings.show_new_label%}
+          <span class="product-label new" style="display: none;">
+            <span>{{'collections.products.new'|t}}</span>
+          </span>
           {%endif%}
 
-          {% endfor %}
-
-        </a>
-      </div><!-- /.product-thumbnail -->
-      {% if sold_out%}
-      <div class="product-soldout">
-        <div class="fp-table">
-          <div class="fp-table-cell">
-            <span class="soldout">{{sold_out_text}}</span>
-          </div>
-        </div>
+        </div><!-- /.product-media -->
       </div>
+      <div class="col-md-6">
+        <div class="product-body">
+          <h2 class="product-name">
 
-      {% endif %}
+            <a href="{{ product.url | within: collection }}" title="{{ product.title }}" >{{ product.title }}</a>
+          </h2><!-- /.product-product -->
 
-      {%if settings.show_sale_label%}
-      {% if on_sale %}
-      <span class="product-label sale">
-        <span>{{'collections.products.sale'|t}}</span>
-      </span>
-      {% endif %}
-      {% endif %}
-      {%if settings.show_new_label%}
-      <span class="product-label new" style="display: none;">
-        <span>{{'collections.products.new'|t}}</span>
-      </span>
-      {%endif%}
+          <div class="product-price">
+            <span class="amout">
 
-    </div><!-- /.product-media -->
+              {% capture price %}{{ product.price | money }}{% endcapture %}
+              <span >{% if product.price_varies %}{{ 'products.general.from_html' | t: price: price }}{% else %}{{ price }}{% endif %}</span>
+              {% if on_sale %} <del class="sale-price">{{ product.compare_at_price | money }}</del> {% endif %}
+            </span>
 
-    <div class="product-body">
-      <h2 class="product-name">
+          </div><!-- /.product-price -->
 
-        <a href="{{ product.url | within: collection }}" title="{{ product.title }}" >{{ product.title }}</a>
-      </h2><!-- /.product-product -->
+          <div class="product-description">
+            {%if settings.show_full_des%}
+            {{product.description}}
+            {%else%}
+            {{product.description |strip_html | truncatewords: 40 }}
+            {%endif%}
+          </div><!-- /.product-description -->
 
-      <div class="product-price">
-        <span class="amout">
+          {%if settings.show_special_featured %}
+          <div class="product-features">
+            <h3>{{settings.show_special_featured_title}}</h3>
+            <ul>
+              <li>{{settings.show_special_featured_line_1}}</li>
+              <li>{{settings.show_special_featured_line_2}}</li>
+              <li>{{settings.show_special_featured_line_3}}</li>
+            </ul>
+          </div><!-- /.product-features -->
+          {%endif%}
 
-          {% capture price %}{{ product.price | money }}{% endcapture %}
-          <span >{% if product.price_varies %}{{ 'products.general.from_html' | t: price: price }}{% else %}{{ price }}{% endif %}</span>
-          {% if on_sale %} <del class="sale-price">{{ product.compare_at_price | money }}</del> {% endif %}
-        </span>
-
-      </div><!-- /.product-price -->
-
-      <div class="product-description">
-        {%if settings.show_full_des%}
-        {{product.description}}
-        {%else%}
-        {{product.description |strip_html | truncatewords: 40 }}
-        {%endif%}
-      </div><!-- /.product-description -->
-
-      {%if settings.show_special_featured %}
-      <div class="product-features">
-        <h3>{{settings.show_special_featured_title}}</h3>
-        <ul>
-          <li>{{settings.show_special_featured_line_1}}</li>
-          <li>{{settings.show_special_featured_line_2}}</li>
-          <li>{{settings.show_special_featured_line_3}}</li>
-        </ul>
-      </div><!-- /.product-features -->
-      {%endif%}
-
-    </div><!-- /.product-body -->
-
+        </div><!-- /.product-body -->
+      </div>
+      </div> <!-- ./ product-container -->
+     </div><!-- /.row -->
 
   </div>
 

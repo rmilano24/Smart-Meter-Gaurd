@@ -1,7 +1,5 @@
-
-
 <section>
-  <div class="container">
+  <div class="container-full-width">
     <div class="padding-vertical-50">
       {% assign products_per_row = settings.new_arrival_num %}
       {% assign products_limit = settings.new_arrival_limit %}
@@ -18,7 +16,7 @@
 
         <div class=" {% for product in collections[col].products limit: products_limit %}{%else%}helper-section{%endfor%} ">
 
-        <div class="products home-products owl-carousel" data-items="3">
+
 
           {% for product in collections[col].products limit: settings.new_arrival_limit%}
           {% include 'product-grid-home' %}
@@ -29,11 +27,11 @@
 
           {% endfor %}
 
-        </div><!-- /.products -->
+        
 
 
       </div>
       </div><!-- /.arrivals -->
     </div>
-  </div><!-- /.container -->
+  </div><!-- /.container-full-width -->
 </section><!-- /section -->
