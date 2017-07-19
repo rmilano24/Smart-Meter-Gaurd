@@ -16,8 +16,6 @@
 
         <div class=" {% for product in collections[col].products limit: products_limit %}{%else%}helper-section{%endfor%} ">
 
-
-
           {% for product in collections[col].products limit: settings.new_arrival_limit%}
           {% include 'product-grid-home' %}
           {%else%}
@@ -26,9 +24,6 @@
 
 
           {% endfor %}
-
-        
-
 
       </div>
       </div><!-- /.arrivals -->
