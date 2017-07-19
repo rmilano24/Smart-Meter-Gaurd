@@ -65,15 +65,6 @@
             <a href="{{ product.url | within: collection }}" title="{{ product.title }}" >{{ product.title }}</a>
           </h2><!-- /.product-product -->
 
-          <div class="product-price">
-            <span class="amout">
-
-              {% capture price %}{{ product.price | money }}{% endcapture %}
-              <span >{% if product.price_varies %}{{ 'products.general.from_html' | t: price: price }}{% else %}{{ price }}{% endif %}</span>
-              {% if on_sale %} <del class="sale-price">{{ product.compare_at_price | money }}</del> {% endif %}
-            </span>
-
-          </div><!-- /.product-price -->
 
           <div class="product-description">
             {%if settings.show_full_des%}
