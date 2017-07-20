@@ -72,18 +72,25 @@
             {%else%}
             {{product.description |strip_html | truncatewords: 40 }}
             {%endif%}
-          </div><!-- /.product-description -->
 
-          {%if settings.show_special_featured %}
-          <div class="product-features">
-            <h3>{{settings.show_special_featured_title}}</h3>
-            <ul>
-              <li>{{settings.show_special_featured_line_1}}</li>
-              <li>{{settings.show_special_featured_line_2}}</li>
-              <li>{{settings.show_special_featured_line_3}}</li>
-            </ul>
-          </div><!-- /.product-features -->
-          {%endif%}
+            {%if settings.show_special_featured %}
+            <div class="product-features">
+              <h3>{{settings.show_special_featured_title}}</h3>
+              <ul>
+                {% if product.metafields.c_f.feature_1 %}<li>{{ product.metafields.c_f.feature_1 }}{% endif %}</li>
+                {% if product.metafields.c_f.feature_2 %}<li>{{ product.metafields.c_f.feature_2 }}{% endif %}</li>
+                {% if product.metafields.c_f.feature_3 %}<li>{{ product.metafields.c_f.feature_3 }}{% endif %}</li>
+                {% if product.metafields.c_f.feature_4 %}<li>{{ product.metafields.c_f.feature_4 }}{% endif %}</li>
+                {% if product.metafields.c_f.feature_5 %}<li>{{ product.metafields.c_f.feature_5 }}{% endif %}</li>
+                {% if product.metafields.c_f.feature_6 %}<li>{{ product.metafields.c_f.feature_6 }}{% endif %}</li>
+                {% if product.metafields.c_f.feature_7 %}<li>{{ product.metafields.c_f.feature_7 }}{% endif %}</li>
+                {% if product.metafields.c_f.feature_8 %}<li>{{ product.metafields.c_f.feature_8 }}{% endif %}</li>
+                {% if product.metafields.c_f.feature_9 %}<li>{{ product.metafields.c_f.feature_9 }}{% endif %}</li>
+              </ul>
+            </div><!-- /.product-features -->
+            {%endif%}
+
+          </div><!-- /.product-description -->
 
           <a href="{{ product.url | within: collection }}" class="tp-caption sfb rv-button start">
               Buy Now
