@@ -193,6 +193,7 @@ footer {
   p {
     font-size: 30px !important;
     font-family: 'Montserrat', sans-serif !important;
+    font-weight: bold;
     font-style: italic;
     list-style: 1px;
     text-transform: uppercase;
@@ -615,6 +616,52 @@ main .main-slider .tp-caption.rv-button.btn-white.btn-outline {
     &:hover {
       background: #1EB6DC;
       color: #fff;
+    }
+  }
+}
+
+// BREAKPOINTS
+
+@media (max-width: 1199px) {
+  .awemenu-nav {
+    border-bottom: none !important;
+  }
+}
+
+@media all and (max-width: 991px) {
+  footer {
+    .container {
+      width: 100% !important;
+    }
+  }
+}
+
+@media all and (min-width: 768px) and (max-width: 991px) {
+  footer {
+    h3 {
+      font-size: 17px;
+    }
+    p, a, address {
+      font-size: 13px;
+    }
+    .widget .list-socials>li>a {
+      margin-right: 10px;
+    }
+  }
+}
+
+@media all and (max-width: 767px) {
+  footer {
+    #block-about {
+      text-align: center;
+    }
+    #block-quick-links, #block-social {
+      padding: 0px;
+    }
+  }
+  #payments {
+    svg {
+      width: 80%;
     }
   }
 }
