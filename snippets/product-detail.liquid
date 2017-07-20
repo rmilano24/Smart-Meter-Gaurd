@@ -65,16 +65,15 @@
         <div class="product-features">
           <h3>{{settings.show_special_featured_title}}</h3>
           <ul>
-            <li>{% if product.metafields.c_f.feature_one %}{{ product.metafields.c_f.feature_one }} {% endif %}</li>
-            <li>{% if product.metafields.c_f.feature_two %}{{ product.metafields.c_f.feature_two }}{% endif %}</li>
-            <li>{% if product.metafields.c_f.feature_three %}{{ product.metafields.c_f.feature_three }}{% endif %}</li>
-            <li>{% if product.metafields.c_f.feature_four %}{{ product.metafields.c_f.feature_four }}{% endif %}</li>
-            <li>{% if product.metafields.c_f.feature_five %}{{ product.metafields.c_f.feature_five }}{% endif %}</li>
-            <li>{% if product.metafields.c_f.feature_six %}{{ product.metafields.c_f.feature_six }}{% endif %}</li>
-            <li>{% if product.metafields.c_f.feature_seven %}{{ product.metafields.c_f.feature_seven }}{% endif %}</li>
-            <li>{% if product.metafields.c_f.feature_eight %}{{ product.metafields.c_f.feature_eight }}{% endif %}</li>
-            <li>{% if product.metafields.c_f.feature_nine %}{{ product.metafields.c_f.feature_nine }}{% endif %}</li>
-            <li>{% if product.metafields.c_f.feature_ten %}{{ product.metafields.c_f.feature_ten }}{% endif %}</li>
+            {% if product.metafields.c_f.feature_1 %}<li>{{ product.metafields.c_f.feature_1 }}{% endif %}</li>
+            {% if product.metafields.c_f.feature_2 %}<li>{{ product.metafields.c_f.feature_2 }}{% endif %}</li>
+            {% if product.metafields.c_f.feature_3 %}<li>{{ product.metafields.c_f.feature_3 }}{% endif %}</li>
+            {% if product.metafields.c_f.feature_4 %}<li>{{ product.metafields.c_f.feature_4 }}{% endif %}</li>
+            {% if product.metafields.c_f.feature_5 %}<li>{{ product.metafields.c_f.feature_5 }}{% endif %}</li>
+            {% if product.metafields.c_f.feature_6 %}<li>{{ product.metafields.c_f.feature_6 }}{% endif %}</li>
+            {% if product.metafields.c_f.feature_7 %}<li>{{ product.metafields.c_f.feature_7 }}{% endif %}</li>
+            {% if product.metafields.c_f.feature_8 %}<li>{{ product.metafields.c_f.feature_8 }}{% endif %}</li>
+            {% if product.metafields.c_f.feature_9 %}<li>{{ product.metafields.c_f.feature_9 }}{% endif %}</li>
           </ul>
         </div><!-- /.product-features -->
         {%endif%}
