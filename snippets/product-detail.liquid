@@ -65,12 +65,20 @@
         <div class="product-features">
           <h3>{{settings.show_special_featured_title}}</h3>
           <ul>
-            <li>{{settings.show_special_featured_line_1}}</li>
-            <li>{{settings.show_special_featured_line_2}}</li>
-            <li>{{settings.show_special_featured_line_3}}</li>
+            <li>{% if product.metafields.c_f.video_url %}{{ product.metafields.c_f.feature_one }} {% endif %}</li>
+            <li>{% if product.metafields.c_f.video_url %}{{ product.metafields.c_f.feature_two }}{% endif %}</li>
+            <li>{% if product.metafields.c_f.video_url %}{{ product.metafields.c_f.feature_three }}{% endif %}</li>
+            <li>{% if product.metafields.c_f.video_url %}{{ product.metafields.c_f.feature_four }}{% endif %}</li>
+            <li>{% if product.metafields.c_f.video_url %}{{ product.metafields.c_f.feature_five }}{% endif %}</li>
+            <li>{% if product.metafields.c_f.video_url %}{{ product.metafields.c_f.feature_six }}{% endif %}</li>
+            <li>{% if product.metafields.c_f.video_url %}{{ product.metafields.c_f.feature_seven }}{% endif %}</li>
+            <li>{% if product.metafields.c_f.video_url %}{{ product.metafields.c_f.feature_eight }}{% endif %}</li>
+            <li>{% if product.metafields.c_f.video_url %}{{ product.metafields.c_f.feature_nine }}{% endif %}</li>
+            <li>{% if product.metafields.c_f.video_url %}{{ product.metafields.c_f.feature_ten }}{% endif %}</li>
           </ul>
         </div><!-- /.product-features -->
         {%endif%}
+
 
         <div class="product-actions-wrapper">
           <form action="/cart/add" method="post" enctype="multipart/form-data" id="AddToCartForm">
