@@ -49,7 +49,6 @@
           {{ product.price | money }}
         </span>
         <div class="product-stars">
-
           <span class=" shopify-product-reviews-badge" data-id="{{ product.id }}"></span>
         </div>
 
@@ -149,17 +148,17 @@
         <ul class="nav" role="tablist">
           {%if settings.show_des_tab%}
           <li role="presentation" class="active">
-            <a href="#product-description"  data-toggle="tab">{{ 'product_detail.description' |t}}</a>
+            <a href="#product-description"  data-toggle="tab">Videos</a>
           </li>
           {% endif%}
           {%if settings.show_custom_tab %}
           <li role="presentation">
-            <a href="#product-infomation"  data-toggle="tab">{{settings.custom_tab_title}}</a>
+            <a href="#product-infomation"  data-toggle="tab">Instructions</a>
           </li>
           {% endif%}
           {%if settings.show_review_tab %}
           <li role="presentation">
-            <a href="#product-review"  data-toggle="tab">{{ 'product_detail.review' |t}} </a>
+            <a href="#product-review"  data-toggle="tab">Product Data</a>
           </li>
           {% endif%}
         </ul><!-- /.nav -->
