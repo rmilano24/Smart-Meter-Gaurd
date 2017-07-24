@@ -148,17 +148,17 @@
         <ul class="nav" role="tablist">
           {%if settings.show_des_tab%}
           <li role="presentation" class="active">
-            <a href="#product-description"  data-toggle="tab">Videos</a>
+            <a href="#videos"  data-toggle="tab">Videos</a>
           </li>
           {% endif%}
           {%if settings.show_custom_tab %}
           <li role="presentation">
-            <a href="#product-infomation"  data-toggle="tab">Instructions</a>
+            <a href="#installation"  data-toggle="tab">Installation</a>
           </li>
           {% endif%}
           {%if settings.show_review_tab %}
           <li role="presentation">
-            <a href="#product-review"  data-toggle="tab">Product Data</a>
+            <a href="#product-data"  data-toggle="tab">Product Data</a>
           </li>
           {% endif%}
         </ul><!-- /.nav -->
@@ -166,25 +166,21 @@
 
       <div class="tab-content">
         {%if settings.show_des_tab%}
-        <div role="tabpanel" class="tab-pane active" id="product-description">
-          <div>{{product.description}}
-
+        <div role="tabpanel" class="tab-pane active" id="videos">
+          <div>
+            {% if product.metafields.c_f.add_videos %}{{ product.metafields.c_f.add_videos }}{% endif %}
           </div>
 
         </div><!-- /.tab-pane -->
         {%endif%}
         {%if settings.show_custom_tab %}
-        <div role="tabpanel" class="tab-pane" id="product-infomation">
-          {{settings.custom_tab_content}}
+        <div role="tabpanel" class="tab-pane" id="installation">
+          {% if product.metafields.c_f.add_instructions %}{{ product.metafields.c_f.add_instructions }}{% endif %}
         </div><!-- /.tab-pane -->
         {%endif%}
         {%if settings.show_review_tab %}
-        <div role="tabpanel" class="tab-pane" id="product-review" itemtype="http://schema.org/Review" itemscope="">
-          {% comment %}
-          Add product review widget, must install Product Review App:
-          https://apps.shopify.com/product-reviews
-          {% endcomment %}
-          <div id="shopify-product-reviews" data-id="{{product.id}}">{{ product.metafields.spr.reviews }}</div>
+        <div role="tabpanel" class="tab-pane" id="product-data">
+        adsf
 
         </div><!-- /.tab-pane -->
         {%endif%}
