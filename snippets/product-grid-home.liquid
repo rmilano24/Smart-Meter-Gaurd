@@ -92,13 +92,30 @@
 
           </div><!-- /.product-description -->
 
-          <a href="{{ product.url | within: collection }}" class="tp-caption sfb rv-button start">
-              Buy Now
-          </a>
 
-          <a href="{{ product.url | within: collection }}" class="tp-caption sfb rv-button start">
-              Buy Now
-          </a>
+        <div class="btn_buy-now btn btn-lg btn-primary">
+          <form action="/cart/add" method="post" class="variants" id="AddToCartForm-{{ product.id }}" enctype="multipart/form-data">
+            {% if sold_out %}
+            <a class="btn-select-option awe-button product-add-cart" data-toggle="tooltip" title="{{settings.product_add_cart}}" href="{{product.url}}" >Buy Now</a>
+            {% else %}
+
+            {% if product.available and product.variants.size > 1 %}
+
+            <a class="btn-select-option awe-button product-add-cart" data-toggle="tooltip" title="{{settings.product_options}}" href="{{product.url}}" >Buy Now</a>
+            {% else %}
+            <input type="hidden" name="id" value="{{ product.variants[0].id }}" />
+            <a class="btn-addToCart awe-button product-add-cart" data-toggle="tooltip" title="{{settings.product_add_cart}}" href="javascript:void(0)" >Buy Now</a>
+            {% endif %}
+
+            {% endif %}
+          </form>
+        </div>
+
+        <a href="{{ product.url | within: collection }}" class="btn btn-lg btn-primary">
+            Learn More
+        </a>
+
+
 
         </div><!-- /.product-body -->
       </div>
