@@ -31,9 +31,20 @@ a {
   color: #1EB6DC;
 }
 
+.btn-addToCart, .btn_buy-now a {
+  color: #fff;
+  font-weight: bold;
+  letter-spacing: 2px;
+  font-family: 'Montserrat', Arial, sans-serif;
+}
+
 .btn-primary {
   border-radius: 50px;
   border-width: 2px;
+  font-family: 'Montserrat', Arial, sans-serif;
+  color: #fff;
+  font-weight: bold;
+  letter-spacing: 2px;
 }
 
 .btn-primary:hover {
@@ -45,7 +56,15 @@ a {
 .ghost {
   background: transparent;
   color: #1EB6DC;
-  border-width: 2px;
+  border: 2px solid #1EB6DC;
+  font-weight: bold;
+  font-family: 'Montserrat', Arial, sans-serif;
+  letter-spacing: 2px;
+  border-radius: 50px;
+  &:hover {
+    background: #1EB6DC;
+    color: #fff;
+  }
 }
 
 .template-index {
@@ -252,6 +271,12 @@ main .main-slider .tp-caption.rv-button.btn-white.btn-outline {
   &:hover {
     background: #1EB6DC !important;
     color: #fff !important;
+  }
+}
+
+.cta {
+  .ghost {
+    margin-left: 5px;
   }
 }
 
