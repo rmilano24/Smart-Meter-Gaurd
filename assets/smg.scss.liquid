@@ -63,6 +63,12 @@ a {
   opacity: 0.8;
 }
 
+.btn-primary:focus, .btn-primary.focus, .btn-primary:active, .btn-primary.active, .open>.btn-primary.dropdown-toggle {
+  background: #1EB6DC !important;
+  border-color: #1EB6DC !important;
+  opacity: 0.8 !important;
+}
+
 .ghost {
   background: transparent;
   color: #1EB6DC;
@@ -87,6 +93,13 @@ main {
     margin: 60px 0;
 }
 
+.engo-popup .success-message:hover:before {
+  background: #1EB6DC !important;
+}
+
+#email-modal .window-window .window-content .btn.close:hover, .close-window:hover, .close-modal:hover {
+  background: #F03454 !important;
+}
 
 .seperator-red {
   background: url({{ 'seperator-red.svg' | asset_url }}) center center no-repeat;
@@ -599,7 +612,7 @@ main .main-slider .tp-caption.rv-button.btn-white.btn-outline {
   }
   .relared-products h3 {
     font-weight: bold;
-    list-spacing: 1px;
+    letter-spacing: 1px;
   }
 }
 
