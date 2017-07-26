@@ -67,11 +67,9 @@
 
 
           <div class="product-description">
-            {%if settings.show_full_des%}
-            {{product.description}}
-            {%else%}
-            {{product.description |strip_html | truncatewords: 40 }}
-            {%endif%}
+
+            {{product.description | strip_html | truncatewords: 40 }}
+
 
             {%if settings.show_special_featured %}
             <div class="product-features">
