@@ -30,11 +30,14 @@ h1 {
 h3 {
   color: #323333;
   font-weight: lighter;
+  text-transform: uppercase;
 }
 
 h4 {
   color: #323333;
   font-weight: lighter;
+  line-height: 19px;
+  text-transform: uppercase;
 }
 
 a {
@@ -565,6 +568,11 @@ main .main-slider .tp-caption.rv-button.btn-white.btn-outline {
     .product-single-quantity label {
       color: #323333;
     }
+    .product-description {
+      p:first-of-type {
+        margin-top: 10px;
+      }
+    }
     .product-socials {
       padding: 15px 0;
       border-top: 1px solid #F1F3F7;
@@ -627,6 +635,9 @@ main .main-slider .tp-caption.rv-button.btn-white.btn-outline {
 }
 .morelink {
     display: block;
+    &:hover, &:focus {
+      color: #1EB6DC;
+    }
 }
 }
 
@@ -637,6 +648,9 @@ main .main-slider .tp-caption.rv-button.btn-white.btn-outline {
     margin-bottom: 30px !important;
     &:last-of-type {
       margin-bottom: 0px;
+    }
+    h4 {
+      font-size: 16px;
     }
   }
   .fancybox-arrow {
@@ -784,8 +798,6 @@ main .main-slider .tp-caption.rv-button.btn-white.btn-outline {
       }
     }
   }
-
-
 
   footer {
     .container {
