@@ -91,18 +91,18 @@
           </div><!-- /.product-description -->
 
         <div class="cta">
-          <div class="btn_buy-now btn btn-lg btn-primary">
+          <div class="">
             <form action="/cart/add" method="post" class="variants" id="AddToCartForm-{{ product.id }}" enctype="multipart/form-data">
               {% if sold_out %}
-              <a class="btn-select-option awe-button product-add-cart" title="{{settings.product_add_cart}}" href="{{product.url}}" >Buy Now</a>
+              <a class="btn-select-option awe-button product-add-cart btn_buy-now btn btn-lg btn-primary" title="{{settings.product_add_cart}}" href="{{product.url}}" >Buy Now</a>
               {% else %}
 
               {% if product.available and product.variants.size > 1 %}
 
-              <a class="btn-select-option awe-button product-add-cart" title="{{settings.product_options}}" href="{{product.url}}" >Buy Now</a>
+              <a class="btn-select-option awe-button product-add-cart btn_buy-now btn btn-lg btn-primary" title="{{settings.product_options}}" href="{{product.url}}" >Buy Now</a>
               {% else %}
               <input type="hidden" name="id" value="{{ product.variants[0].id }}" />
-              <a class="btn-addToCart awe-button product-add-cart" title="{{settings.product_add_cart}}" href="javascript:void(0)" >Buy Now</a>
+              <a class="btn-addToCart awe-button product-add-cart btn_buy-now btn btn-lg btn-primary" title="{{settings.product_add_cart}}" href="javascript:void(0)" >Buy Now</a>
               {% endif %}
 
               {% endif %}

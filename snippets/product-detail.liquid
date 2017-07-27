@@ -85,7 +85,7 @@
                 {% for variant in product.variants %}
                 {% if variant.available %}
 
-                <option {% if variant == product.selected_or_first_available_variant %} selected="selected" {% endif %} data-sku="{{ variant.sku }}" value="{{ variant.id }}">{{ variant.title }} </option>
+                <!-- <option {% if variant == product.selected_or_first_available_variant %} selected="selected" {% endif %} data-sku="{{ variant.sku }}" value="{{ variant.id }}">{{ variant.title }} </option> -->
 
                 {% else %}
                 <option disabled="disabled">
@@ -332,7 +332,7 @@ $(document).ready(function() {
     var showChar = 100;  // How many characters are shown by default
     var ellipsestext = "...";
     var moretext = "Learn More >";
-    var lesstext = "Show less";
+    var lesstext = "Show Less";
 
 
     $('.more').each(function() {
@@ -363,4 +363,15 @@ $(document).ready(function() {
         return false;
     });
 });
+</script>
+
+ <!-- THIS IS FOR DEFAULT SELECT -->
+
+ <script>
+var productOptions = [];
+ {% for option in product.options %}
+  var optionObj = {};
+  optionObj[ {{ forloop.index0 }} ] = "{{ product.options[forloop.index0] }}";
+  productOptions.push(optionObj);
+ {% endfor %}
 </script>
