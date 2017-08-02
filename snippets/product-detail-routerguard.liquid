@@ -1,5 +1,5 @@
 
-<div class="container" itemscope itemtype="http://schema.org/Product">
+<div class="container" itemscope itemtype="http://schema.org/Product" style="border:1px solid blue;">
   <meta itemprop="url" content="{{ shop.url }}{{ product.url }}">
   <meta itemprop="image" content="{{ product.featured_image.src | img_url: 'grande' }}">
   <div class="row">
@@ -85,7 +85,7 @@
                 {% for variant in product.variants %}
                 {% if variant.available %}
 
-               <option {% if variant == product.selected_or_first_available_variant %} selected="selected" {% endif %} data-sku="{{ variant.sku }}" value="{{ variant.id }}">{{ variant.title }} </option> 
+               <option {% if variant == product.selected_or_first_available_variant %} selected="selected" {% endif %} data-sku="{{ variant.sku }}" value="{{ variant.id }}">{{ variant.title }} </option>
 
                 {% else %}
                 <option disabled="disabled">
